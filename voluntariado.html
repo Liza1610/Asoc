@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voluntariado – Asociación Gasvar</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Catamaran:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gasvar-pink:#fa7ba0;   /* Contacto */
+      --gasvar-amber:#f0b75a;  /* Inicio   */
+    }
+
+    /* ===== Base ===== */
+    body{
+      background: linear-gradient(135deg, #ffe4e1 0%, #ffd6ec 100%);
+      font-family: 'Montserrat','Catamaran',sans-serif;
+      color:#444; margin:0; padding:0; line-height:1.6;
+    }
+    h1,h2,h3{ color:#fa7ba0; margin-top:1em; }
+    a{ color:#fa7ba0; }
+    p{ margin: 0 0 1em 0; }
+
+    /* ===== Cabecera ===== */
+    .site-header{
+      position:relative;
+      text-align:center;
+      padding:28px 14px 24px;
+      background:#fff4fa;
+      border-bottom:4px solid #fbcacb;
+      box-shadow:0 2px 8px #fbcacb60;
+    }
+    .brand{
+      display:flex; align-items:center; justify-content:center; gap:14px;
+    }
+    .brand-logo img{
+      width:76px; height:76px; object-fit:contain;
+      border-radius:50%; background:#fff; padding:6px;
+      box-shadow:0 2px 10px rgba(250,123,160,.25);
+    }
+    .brand-text h1{ 
+      margin:0; 
+      letter-spacing:2px; 
+      font-size:2.8em; 
+      color:#fa7ba0; 
+    }
+    .tagline{
+      font-size:1rem;
+      color:#c66d89;
+      margin-top:0.25rem;
+    }
+
+    .header-actions{
+      position:absolute; right:16px; top:14px;
+      display:flex; gap:10px;
+    }
+    .action-pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 14px; border-radius:12px; color:#fff; font-weight:700; text-decoration:none;
+      box-shadow:0 3px 10px rgba(0,0,0,.10);
+      transition:transform .15s ease, filter .15s ease;
+    }
+    .action-pill svg{ width:18px; height:18px; }
+    .action-pill:hover{ transform:translateY(-1px); filter:brightness(.95); }
+    .action-pill.inicio{   background:var(--gasvar-amber); }
+    .action-pill.contacto{ background:var(--gasvar-pink); }
+
+    @media (max-width:600px){
+      .brand{ flex-direction:column; gap:10px; }
+      .brand-text h1{ font-size:2.2em; }
+    }
+
+    /* ===== Contenido ===== */
+    .container{ max-width:900px; margin:24px auto; padding:0 16px; }
+    .box{
+      background:#fff7fa; border:1px solid #f3d4dc; border-radius:14px;
+      padding:18px; box-shadow:0 6px 18px #fa7ba033; margin-bottom:18px;
+    }
+    .lead{ font-weight:700; color:#fa7ba0; }
+
+    .req-row{ display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap; }
+    .req-row img{
+      max-width:160px; border-radius:12px; box-shadow:0 4px 12px #fa7ba04a;
+    }
+    .req-row ul{ margin:0; padding-left:18px; }
+    .req-row li{ margin:6px 0; }
+
+    /* Footer */
+    footer{ background:#fa7ba0; color:#fff; text-align:center; padding:15px 10px; margin-top:28px; font-size:.9em; }
+  </style>
+</head>
+<body>
+
+  <!-- CABECERA igual que index -->
+  <header class="site-header">
+    <div class="brand">
+      <a class="brand-logo" href="index.html" aria-label="Inicio">
+        <img src="img/gasvar2.jpg" alt="Logo GASVAR" width="76" height="76" loading="eager" decoding="async">
+      </a>
+      <div class="brand-text">
+        <h1>Asociación Gasvar</h1>
+        <p class="tagline">Por el bienestar animal, juntos hacemos la diferencia</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a class="action-pill inicio" href="index.html" aria-label="Ir a inicio">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9z" stroke="white" stroke-width="2" stroke-linejoin="round"/></svg>
+        Inicio
+      </a>
+      <a class="action-pill contacto" href="contacto.html" aria-label="Ir a contacto">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm0 2l8 5 8-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Contacto
+      </a>
+    </div>
+  </header>
+
+  <!-- CONTENIDO voluntariado -->
+  <main class="container">
+    <section class="box">
+      <p class="lead">Buscamos personas comprometidas y con energía: ¡eres parte esencial del funcionamiento de nuestro refugio!</p>
+      <p>
+        Necesitamos personas con ganas de ayudar a los animales: alimentación de los gatos, mantenimiento de las colonias felinas, colaboración para el método CER.
+      </p>
+    </section>
+
+    <section class="box">
+      <h2>Compromisos del voluntariado</h2>
+      <div class="req-row">
+        <img src="img/gasvar3.jpg" alt="Voluntariado en Gasvar">
+        <ul>
+          <li><strong>Alimentar al menos una vez por semana</strong> la colonia asignada (turnos coordinados).</li>
+          <li>Revisar <strong>agua</strong>, limpiar comederos y dejar el punto en buenas condiciones tras cada visita.</li>
+          <li>Mucha <strong>motivación para ayudar en la organización de paradas</strong> y eventos solidarios (montaje, atención y recogida).</li>
+          <li>Mucha <strong>motivación para mejorar la calidad de vida</strong> de los gatos callejeros: avisos, seguimiento y apoyo en acciones CER con formación.</li>
+          <li>Comunicación y trabajo en equipo para reportar incidencias y necesidades de la colonia.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="box">
+      <h2>Compromiso y motivación</h2>
+      <p>
+        Ser voluntario/a requiere sensibilidad, responsabilidad y compromiso. Tu papel es clave para el
+        bienestar de los animales y para que su estancia sea amena y feliz.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Asociación Gasvar © 2025 — Montornès del Vallès
+  </footer>
+</body>
+</html>
