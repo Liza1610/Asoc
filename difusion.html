@@ -81,6 +81,25 @@
       background:#fa7ba0; color:#fff; text-align:center;
       padding:15px 10px; margin-top:30px; font-size:.9em;
     }
+
+    /* --- Responsive (móvil) igual que index --- */
+    @media (max-width:768px){
+      .site-header{ padding:20px 12px 18px; }
+      .brand{ flex-direction:column; gap:10px; text-align:center; }
+      .brand-text h1{ font-size:1.9em; line-height:1.15; }
+
+      .header-actions{
+        position:static; justify-content:center; align-items:center;
+        flex-wrap:wrap; gap:8px; margin-top:10px;
+      }
+      .action-pill{ padding:8px 12px; border-radius:10px; font-size:.95rem; }
+
+      img{ max-width:100%; height:auto; }
+    }
+    @media (max-width:360px){
+      .brand-text h1{ font-size:1.7em; }
+      .action-pill{ font-size:.9rem; padding:7px 10px; }
+    }
   </style>
 </head>
 <body>
@@ -110,17 +129,17 @@
 
   <div class="container">
     <div class="media-strip">
-      <a class="media-card" href="https://www.instagram.com/p/DNDJqRJK80s/" target="_blank">
+      <a class="media-card" href="https://www.instagram.com/p/DNDJqRJK80s/" target="_blank" rel="noopener">
         <img src="img/gasvar6.jpg" alt="Gatitos bebés esperando un hogar">
         <span class="caption">Gatitos bebés esperando un hogar</span>
       </a>
 
-      <a class="media-card" href="https://www.instagram.com/p/DM6Gq5bKCOT/?img_index=1" target="_blank">
+      <a class="media-card" href="https://www.instagram.com/p/DM6Gq5bKCOT/?img_index=1" target="_blank" rel="noopener">
         <img src="img/gasvar5.jpg" alt="Gatos en proceso de recuperación">
         <span class="caption">Gatos en proceso de recuperación</span>
       </a>
 
-      <a class="media-card" href="https://www.instagram.com/p/DLx78F4q6pm/" target="_blank">
+      <a class="media-card" href="https://www.instagram.com/p/DLx78F4q6pm/" target="_blank" rel="noopener">
         <img src="img/gasvar7.jpg" alt="Gatos felices con sus nuevas familias">
         <span class="caption">Gatos felices con sus nuevas familias</span>
       </a>

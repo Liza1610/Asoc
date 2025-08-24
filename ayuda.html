@@ -107,12 +107,28 @@
       background:#fa7ba0; color:#fff; text-align:center; padding:15px 10px; margin-top:3em; font-size:.9em;
     }
 
-    /* Responsive */
+    /* --- Responsive --- */
     @media (max-width:900px){ .grid{ grid-template-columns:1fr; } }
-    @media (max-width:600px){
-      .brand{ flex-direction:column; gap:10px; }
-      .brand-text h1{ font-size:2.2em; }
-      .grid{ grid-template-columns:1fr; }
+    @media (max-width:768px){
+      .site-header{ padding:20px 12px 18px; }
+      .brand{ flex-direction:column; gap:10px; text-align:center; }
+      .brand-text h1{ font-size:1.9em; line-height:1.15; }
+
+      .header-actions{
+        position:static;               /* FIX: pills en su propia fila */
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:8px;
+        margin-top:10px;
+      }
+      .action-pill{ padding:8px 12px; border-radius:10px; font-size:.95rem; }
+
+      img{ max-width:100%; height:auto; } /* imágenes fluidas */
+    }
+    @media (max-width:360px){
+      .brand-text h1{ font-size:1.7em; }
+      .action-pill{ font-size:.9rem; padding:7px 10px; }
     }
   </style>
 </head>
@@ -165,44 +181,45 @@
           <a class="btn" href="contacto.html">Coordinamos la recogida</a>
         </div>
       </article>
-  <article class="card">
-  <img class="thumb" src="img/gasvar13.jpg" alt="Calendario 2025 GASVAR">
-  <h3>Huchas solidarias</h3>
-  <p>Puedes dejar tu donación en diferentes puntos de Montornès:</p>
-  <ul>
-    <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b91ea5268757:0x9da318db2d311eeb?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">Veterinaria Petits i Peluts</a></li>
-    <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b855d1acbead:0xe521ec6e2ba37137?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">La Gaditana</a></li>
-    <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b99f9bfbdf3f:0xc339495787f221ba" target="_blank" rel="noopener">Farmacia Montornès</a></li>
-    <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b8afa8f35cf1:0xc0f54a823bb68a1c" target="_blank" rel="noopener">Veterinaria Bastet</a></li>
-    <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b854380cb495:0x55d629270cce63b9" target="_blank" rel="noopener">Veterinaria Montornès</a></li>
-  </ul>
-</article>
 
-<article class="card">
-  <img class="thumb" src="img/gasvar8.jpg" alt="Calendario 2025 GASVAR">
-  <h3>Calendario 2025</h3>
-  <p>La venta de calendarios ayuda a costear gastos veterinarios, alimento y material. Puntos de venta:</p>
-  <ul>
-    <li><a href="https://maps.app.goo.gl/BBBBB" target="_blank" rel="noopener">Frutos secos Orellana (antigua Ike)</a></li>
-    <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b855d1acbead:0xe521ec6e2ba37137?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">La Gaditana (comidas preparadas)</a></li>
-    <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b99f9bfbdf3f:0xc339495787f221ba" target="_blank" rel="noopener">Farmacia Montornès</a></li>
-    <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b91ea5268757:0x9da318db2d311eeb?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">Veterinaria Petits i Peluts (veterinaria)</a></li>
-    <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b8551f291d8f:0xa8fb999b8c5456a0" target="_blank" rel="noopener">Zoenders </a></li>
-  </ul>
-</article>
+      <article class="card">
+        <img class="thumb" src="img/gasvar13.jpg" alt="Huchas solidarias">
+        <h3>Huchas solidarias</h3>
+        <p>Puedes dejar tu donación en diferentes puntos de Montornès:</p>
+        <ul>
+          <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b91ea5268757:0x9da318db2d311eeb?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">Veterinaria Petits i Peluts</a></li>
+          <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b855d1acbead:0xe521ec6e2ba37137?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">La Gaditana</a></li>
+          <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b99f9bfbdf3f:0xc339495787f221ba" target="_blank" rel="noopener">Farmacia Montornès</a></li>
+          <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b8afa8f35cf1:0xc0f54a823bb68a1c" target="_blank" rel="noopener">Veterinaria Bastet</a></li>
+          <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b854380cb495:0x55d629270cce63b9" target="_blank" rel="noopener">Veterinaria Montornès</a></li>
+        </ul>
+      </article>
 
-<article class="card">
-  <img class="thumb" src="img/gasvar9.jpg" alt="Lotería solidaria GASVAR">
-  <h3>Lotería solidaria</h3>
-  <p>Comprando nuestras participaciones colaboras con los gastos veterinarios. Puntos:</p>
- <ul>
-    <li><a href="https://maps.app.goo.gl/BBBBB" target="_blank" rel="noopener">Frutos secos Orellana (antigua Ike)</a></li>
-    <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b855d1acbead:0xe521ec6e2ba37137?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">La Gaditana (comidas preparadas)</a></li>
-    <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b99f9bfbdf3f:0xc339495787f221ba" target="_blank" rel="noopener">Farmacia Montornès</a></li>
-    <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b91ea5268757:0x9da318db2d311eeb?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">Veterinaria Petits i Peluts (veterinaria)</a></li>
-    <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b8551f291d8f:0xa8fb999b8c5456a0" target="_blank" rel="noopener">Zoenders </a></li>
-  </ul>
-</article>
+      <article class="card">
+        <img class="thumb" src="img/gasvar8.jpg" alt="Calendario 2025 GASVAR">
+        <h3>Calendario 2025</h3>
+        <p>La venta de calendarios ayuda a costear gastos veterinarios, alimento y material. Puntos de venta:</p>
+        <ul>
+          <li><a href="https://maps.app.goo.gl/BBBBB" target="_blank" rel="noopener">Frutos secos Orellana (antigua Ike)</a></li>
+          <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b855d1acbead:0xe521ec6e2ba37137?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">La Gaditana (comidas preparadas)</a></li>
+          <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b99f9bfbdf3f:0xc339495787f221ba" target="_blank" rel="noopener">Farmacia Montornès</a></li>
+          <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b91ea5268757:0x9da318db2d311eeb?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">Veterinaria Petits i Peluts (veterinaria)</a></li>
+          <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b8551f291d8f:0xa8fb999b8c5456a0" target="_blank" rel="noopener">Zoenders</a></li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <img class="thumb" src="img/gasvar9.jpg" alt="Lotería solidaria GASVAR">
+        <h3>Lotería solidaria</h3>
+        <p>Comprando nuestras participaciones colaboras con los gastos veterinarios. Puntos:</p>
+        <ul>
+          <li><a href="https://maps.app.goo.gl/BBBBB" target="_blank" rel="noopener">Frutos secos Orellana (antigua Ike)</a></li>
+          <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b855d1acbead:0xe521ec6e2ba37137?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">La Gaditana (comidas preparadas)</a></li>
+          <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b99f9bfbdf3f:0xc339495787f221ba" target="_blank" rel="noopener">Farmacia Montornès</a></li>
+          <li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x12a4b91ea5268757:0x9da318db2d311eeb?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener">Veterinaria Petits i Peluts (veterinaria)</a></li>
+          <li><a href="https://www.google.com/maps?hl=es&gl=es&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x12a4b8551f291d8f:0xa8fb999b8c5456a0" target="_blank" rel="noopener">Zoenders</a></li>
+        </ul>
+      </article>
 
       <article class="card">
         <h3>Donación puntual</h3>
